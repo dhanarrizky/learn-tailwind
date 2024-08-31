@@ -1,0 +1,4 @@
+Finally, make the CSS file even smaller
+
+use this command
+npx tailwindcss -o ./output.css --minify
