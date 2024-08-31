@@ -5,18 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>One tailwind</title>
     <link rel="stylesheet" href="./css/output.css">
-    <!-- <style type="text/tailwindcss">
-        #toggle:checked ~ label div.toggle-circle {
-            @apply translate-x-3;
-        }
-    </style> -->
 </head>
-<!-- body with dark mode -->
-<body class="dark:bg-slate-800 dark:text-slate-200">
-<!-- <body> -->
-    <!-- pusedo dark mode -->
+<body>
     <button class="my-10 bg-sky-500 px-5 py-2 rounded-full text-white font-semibold font-Inter block mx-auto hover:bg-sky-600 active:bg-sky-700 focus:ring focus:ring-sky-400">Button</button>
-    <!-- button with dark mode -->
+    
     <button class="my-10 bg-sky-500 px-5 py-2 rounded-full text-white 
     font-semibold font-Inter block mx-auto hover:bg-sky-600
      active:bg-sky-700 focus:ring focus:ring-sky-400
@@ -25,16 +17,14 @@
      dark:hover:bg-slate-100
      ">Button</button>
 
-     <!-- grouping -->
-      <div class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md font-Inter hover:bg-sky-500 group">
+    <div class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md font-Inter hover:bg-sky-500 group">
         <h5 class="font-bold text-slate-700 text-lg-mb-3 group-hover:text-white">My Card</h5>
         <p class="text-slat-600 group-hover:text-white">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos dolore, veritatis exercitationem, natus rerum culpa, soluta ducimus nulla totam recusandae optio minus quisquam suscipit iusto officia aliquid placeat delectus! Amet illum molestiae, temporibus officia illo cum non eum nam, obcaecati consequuntur rem quo esse perferendis veritatis vero, tenetur a ex.
         </p>
-      </div>
+    </div>
 
-
-      <div class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md font-Inter">
+    <div class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md font-Inter">
         <form action="#">
             <label for="email">
                 <span class="block font-semibold mb-1 text-state-700 after:content-['*']
@@ -43,7 +33,7 @@
                 placeholder="enter your email ...."
                 class="px-3 py-2 border shadow rounded w-full 
                 block text-sm placeholder:text-slate-400
-                focus:outline-none focus:ting-1 focus:ring-sky-500
+                focus:outline-none focus:ring-1 focus:ring-sky-500
                 focus:border-sky-500
                 invalid:text-pink-700
                 invalid:focus:ring-pink-700
@@ -54,34 +44,42 @@
                 ">Email is invalid!!</p>
             </label>
         </form>
-      </div>
+    </div>
 
-      <!-- createing dark mode button -->
-       <div class="flex justify-center">
+    <!-- Dark mode toggle button -->
+    <div class="flex justify-center">
         <span class="text-sm text-slate-500 mr-2">Light</span>
         <input type="checkbox" id="toggle" class="hidden">
         <label for="toggle">
             <div class="w-9 h-5 bg-slate-500 rounded-full flex items-center p-1 cursor-pointer">
-                <div class="w-4 h-4 bg-white rounded-full toggle-circle"></div>
+                <div class="w-4 h-4 bg-white rounded-full toggle-circle transform transition-transform duration-300"></div>
             </div>
         </label>
         <span class="text-sm text-slate-500 ml-2">Dark</span>
-       </div>
+    </div>
 
-       <script>
-        // Ambil elemen-elemen yang diperlukan
+    <script>
         const checkbox = document.getElementById('toggle');
         const toggleCircle = document.querySelector('.toggle-circle');
         const html = document.querySelector('html');
 
-        // Tambahkan event listener untuk checkbox
+        // Periksa apakah sebelumnya ada preferensi pengguna untuk dark mode
+        const savedMode = localStorage.getItem('darkMode');
+        if (savedMode === 'enabled') {
+            checkbox.checked = true;
+            html.classList.add('dark');
+            toggleCircle.classList.add('translate-x-4');
+        }
+
         checkbox.addEventListener('change', function() {
             if (checkbox.checked) {
                 html.classList.add('dark');
-                toggleCircle.classList.add('translate-x-3'); // Pindahkan toggle ke kanan
+                toggleCircle.classList.add('translate-x-4');
+                localStorage.setItem('darkMode', 'enabled'); // Simpan preferensi pengguna
             } else {
                 html.classList.remove('dark');
-                toggleCircle.classList.remove('translate-x-3'); // Kembalikan toggle ke kiri
+                toggleCircle.classList.remove('translate-x-4');
+                localStorage.setItem('darkMode', 'disabled'); // Simpan preferensi pengguna
             }
         });
     </script>
