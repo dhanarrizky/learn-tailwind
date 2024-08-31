@@ -9,6 +9,9 @@ module.exports = {
       },
       fontFamily: {
         Inter : ['Inter'],
+      },
+      colors: {
+        hihi : '#bada55'
       }
     },
   },
