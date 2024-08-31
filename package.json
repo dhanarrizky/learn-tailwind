@@ -78,6 +78,8 @@
     "postcss-nested": "^6.2.0",
     "postcss-selector-parser": "^6.1.2",
     "postcss-value-parser": "^4.2.0",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.6",
     "queue-microtask": "^1.2.3",
     "read-cache": "^1.0.0",
     "readdirp": "^3.6.0",
@@ -107,7 +109,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":"npx tailwindcss -i ./src/css/input.css -o ./src/css/output.css --watch"
+    "dev": "npx tailwindcss -i ./src/css/input.css -o ./src/css/output.css --watch"
   },
   "author": "",
   "license": "ISC",

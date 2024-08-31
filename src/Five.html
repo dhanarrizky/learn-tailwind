@@ -1,14 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>One tailwind</title>
-    <link rel="stylesheet" href="./css/output.css">
-</head>
-<body>
-    <div class="container">
-        <h1>hallo</h1>
+    <link rel="stylesheet" href="./css/output.css" />
+  </head>
+  <body>
+    <div
+      class="container h-lvh w-full flex justify-center items-center bg-slate-200"
+    >
+      <div
+        class="w-40 h-40 bg-sky-500 mx-auto rounded-lg shadow-lg hover:rotate-45 hover:scale-125 transition hover:bg-pink-500"
+      ></div>
+      <div class="w-40 h-40 mx-auto mt-20 group">
+        <div
+          class="w-full h-full bg-sky-500 rounded-lg shadow-lg group-hover:rotate-180 origin-top-left transition duration-1000 ease-in-out"
+        ></div>
+      </div>
+      <div class="w-40 h-40 mx-auto mt-20 group">
+        <div
+          class="w-full h-full bg-sky-500 rounded-lg shadow-lg group-hover:rotate-180 origin-top-left transition duration-1000 ease-in-out delay-1000"
+        ></div>
+      </div>
     </div>
-</body>
+    <div class="my-10 h-10 bg-green-500 w-full"></div>
+    <!-- animation -->
+    <div
+      class="w-40 h-40 bg-pink-500 mx-auto rounded-full shadow-lg my-20 animate-pulse"
+    ></div>
+    <div
+      class="w-40 h-40 bg-pink-500 mx-auto rounded-lg shadow-lg my-20 animate-spin"
+    ></div>
+    <h1 class="font-bold my-20 block text-center bg-slate-300">
+      Animation Custom
+    </h1>
+    <div
+      class="w-40 h-40 bg-pink-500 mx-auto rounded-lg shadow-lg my-20 animate-spin-slow"
+    ></div>
+    <div
+      class="w-40 h-40 bg-pink-500 mx-auto rounded-lg shadow-lg my-20 animate-sliders"
+    ></div>
+  </body>
 </html>

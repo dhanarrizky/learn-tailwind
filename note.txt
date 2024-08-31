@@ -2,3 +2,11 @@ Finally, make the CSS file even smaller
 
 use this command
 npx tailwindcss -o ./output.css --minify
+
+
+# pretter
+npm i prettier prettier-plugin-tailwindcss
+
+
+# rungin with terminal
+npx prettier --write .
