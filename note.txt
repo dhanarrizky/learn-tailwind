@@ -10,3 +10,7 @@ npm i prettier prettier-plugin-tailwindcss
 
 # rungin with terminal
 npx prettier --write .
+
+
+================================================
+To make a responsive website using Tailwind, try to make it for the mobile screen first, then later we will make changes to the break points above it gradually.
