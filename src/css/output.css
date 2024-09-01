@@ -696,12 +696,12 @@ video {
   margin-top: 5rem;
 }
 
-.mt-4 {
-  margin-top: 1rem;
-}
-
 .mt-6 {
   margin-top: 1.5rem;
+}
+
+.mt-64 {
+  margin-top: 16rem;
 }
 
 .block {
@@ -716,8 +716,24 @@ video {
   display: flex;
 }
 
+.grid {
+  display: grid;
+}
+
 .hidden {
   display: none;
+}
+
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}
+
+.aspect-\[4\/3\] {
+  aspect-ratio: 4/3;
 }
 
 .h-10 {
@@ -859,6 +875,10 @@ video {
        columns: 3;
 }
 
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -869,6 +889,10 @@ video {
 
 .justify-center {
   justify-content: center;
+}
+
+.gap-2 {
+  gap: 0.5rem;
 }
 
 .scroll-smooth {
@@ -975,6 +999,11 @@ video {
   background-color: rgb(253 224 71 / var(--tw-bg-opacity));
 }
 
+.bg-blue-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+}
+
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -1008,6 +1037,10 @@ video {
 
 .p-5 {
   padding: 1.25rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
 }
 
 .px-3 {
@@ -1065,6 +1098,16 @@ video {
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .font-bold {
@@ -1307,6 +1350,30 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:col-start-2 {
+    grid-column-start: 2;
+  }
+
+  .md\:col-start-6 {
+    grid-column-start: 6;
+  }
+
+  .md\:block {
+    display: block;
+  }
+
+  .md\:aspect-\[3\/4\] {
+    aspect-ratio: 3/4;
+  }
+
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .md\:gap-4 {
+    gap: 1rem;
+  }
+
   .md\:bg-green-200 {
     --tw-bg-opacity: 1;
     background-color: rgb(187 247 208 / var(--tw-bg-opacity));
@@ -1315,9 +1382,21 @@ video {
   .md\:bg-transparent {
     background-color: transparent;
   }
+
+  .md\:p-4 {
+    padding: 1rem;
+  }
 }
 
 @media (min-width: 1024px) {
+  .lg\:flex {
+    display: flex;
+  }
+
+  .lg\:hidden {
+    display: none;
+  }
+
   .lg\:bg-blue-200 {
     --tw-bg-opacity: 1;
     background-color: rgb(191 219 254 / var(--tw-bg-opacity));
@@ -1325,6 +1404,10 @@ video {
 }
 
 @media (min-width: 1280px) {
+  .xl\:aspect-\[4\/3\] {
+    aspect-ratio: 4/3;
+  }
+
   .xl\:bg-yellow-200 {
     --tw-bg-opacity: 1;
     background-color: rgb(254 240 138 / var(--tw-bg-opacity));
