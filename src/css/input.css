@@ -3,3 +3,18 @@
 @tailwind utilities;
 
 /* npx tailwindcss -i ./input.css -o ./output.css --watch */
+
+/* for createing dewfault styleing on tailwind */
+@layer base {
+  h1 {
+    font-size: 10rem;
+  }
+}
+
+@layer utilities {
+  #toggle:checked ~ label div.toggle-circle {
+    @apply translate-x-3;
+  }
+}
+
+/* @apply is used to create a custom class that already exists in Tailwind but if we want to customize it without applay we can also custom it using our own CSS style */
